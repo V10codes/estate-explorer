@@ -1,0 +1,66 @@
+@import "../../responsive.scss";
+.homePage {
+  display: flex;
+  height: 100%;
+  .textContainer {
+    flex: 3;
+    .wrapper {
+      padding-right: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 25px;
+      height: 100%;
+      @include md {
+        padding: 0;
+      }
+      @include sm {
+        justify-content: flex-start;
+      }
+      .title {
+        font-size: 50px;
+        text-decoration-line: underline;
+        text-decoration-color: #0b60b0;
+        text-underline-offset: 4px;
+        text-decoration-thickness: 6px;
+        @include lg {
+          font-size: 30px;
+        }
+      }
+      p {
+        font-size: 15px;
+      }
+      .boxes {
+        display: flex;
+        justify-content: space-between;
+        @include sm {
+          display: none;
+        }
+        h1 {
+          font-size: 36px;
+        }
+        h2 {
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+  }
+  .imgContainer {
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    flex: 2;
+    @include lg {
+      display: none;
+    }
+    img {
+      width: 75%;
+      border: 5px solid #40A2D8;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+  }
+}
